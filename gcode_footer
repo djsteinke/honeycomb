@@ -1,0 +1,27 @@
+M140 S0
+G91 ;Relative positioning
+G1 E-2 F2700 ;Retract a bit
+G1 E-2 Z0.2 F2400 ;Retract and raise Z
+G1 X5 Y5 F3000 ;Wipe out
+G1 Z10 ;Raise Z more
+G90 ;Absolute positioning
+
+G1 X0 Y220 ;Present print
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+
+M84 X Y E ;Disable all steppers but Z
+
+M82 ;absolute extrusion mode
+M104 S0
+;End of Gcode
+;SETTING_3 {"global_quality": "[general]\\nversion = 4\\nname = Super Quality #2
+;SETTING_3 \\ndefinition = creality_base\\n\\n[metadata]\\ntype = quality_change
+;SETTING_3 s\\nquality_type = super\\nsetting_version = 17\\n\\n[values]\\n\\n",
+;SETTING_3  "extruder_quality": ["[general]\\nversion = 4\\nname = Super Quality
+;SETTING_3  #2\\ndefinition = creality_ender3\\n\\n[metadata]\\ntype = quality_c
+;SETTING_3 hanges\\nquality_type = super\\nsetting_version = 17\\nposition = 0\\
+;SETTING_3 n\\n[values]\\nbottom_layers = 0\\ninfill_pattern = triangles\\ninfil
+;SETTING_3 l_sparse_density = 15\\nskirt_gap = 5\\nspeed_print = 30\\ntop_layers
+;SETTING_3  = 0\\nwall_line_count = 4\\n\\n"]}
